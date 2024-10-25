@@ -1,0 +1,514 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import DualSection from "@components/DualSection.astro";
+import MH2 from "@components/svgs/MH2.astro";
+import Hero from "@components/svgs/Hero.astro";
+import MH3 from "@components/svgs/MH3.astro";
+import MH4 from "@components/svgs/MH4.astro";
+import MH5 from "@components/svgs/MH5.astro";
+import MH6 from "@components/svgs/MH6.astro";
+import MH7 from "@components/svgs/MH7.astro";
+import MH8 from "@components/svgs/MH8.astro";
+import MH9 from "@components/svgs/MH9.astro";
+import MH10 from "@components/svgs/MH10.astro";
+import TestimonialCard from "@components/TestimonialCard.astro";
+
+let testimonials = [
+	{
+		name: "Jane Doe",
+		body: "This platform helped me find the support I needed during a very dark time. I’m so grateful for their work.",
+	},
+	{
+		name: "John Smith",
+		body: "It’s amazing to see a place that genuinely cares about mental health and helps people without expecting anything in return.",
+	},
+	{
+		name: "Alice Johnson",
+		body: "I found solace here when I felt completely alone. The community and the resources offered are truly life-changing.",
+	},
+	{
+		name: "Emily Davis",
+		body: "This organization gave me hope and connected me with people who understood exactly what I was going through.",
+	},
+	{
+		name: "Chris Lee",
+		body: "Knowing that there’s a safe space for people like me, especially one running purely on donations, is comforting beyond words.",
+	},
+	{
+		name: "Priya Kumar",
+		body: "I felt heard and understood for the first time in a long while. Their impact on my life is beyond measure.",
+	},
+	{
+		name: "Samantha Brown",
+		body: "The support I received here has been nothing short of a blessing. It’s heartwarming to see the care they put into helping everyone.",
+	},
+	{
+		name: "David Wilson",
+		body: "They made such a difference in my life, and the fact that they do this all through donations is inspiring.",
+	},
+	{
+		name: "Amit Patel",
+		body: "I can't express my gratitude enough. They reach out to the ones struggling and offer a lifeline.",
+	},
+	{
+		name: "Sarah Green",
+		body: "Finding this community was like discovering a light at the end of a long tunnel. Their work is priceless.",
+	},
+];
+---
+
+<Layout
+	title="Welcome to Astro."
+	description="The description of your website"
+	keywords={[""]}
+>
+	<DualSection className="bg-yellow-500">
+		<Hero slot="svg" />
+
+		<div class="flex flex-col gap-y-4 my-auto">
+			<h1 class="font-display text-5xl font-extrabold">
+				Mental Health Matters – Support Our Mission
+			</h1>
+			<p class="font-display text-2xl">
+				Join us in providing free mental health
+				resources to those in need. Your donation helps
+				make a difference.
+			</p>
+			<div class="space-x-4">
+				<button
+					class="duration-100 transition-shadow hover:shadow-[0.5rem_0.5rem_0_0_black] border-4 border-black bg-purple-500 py-4 px-8"
+					>Donate</button
+				>
+				<button
+					class="duration-100 transition-shadow hover:shadow-[0.5rem_0.5rem_0_0_black] border-4 border-black bg-white py-4 px-8"
+					>Get Help</button
+				>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-white">
+		<MH10 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Understanding Depression
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					Depression is more than just feeling
+					sad&#44; it&#39;s a serious mental
+					health condition that can impact every
+					aspect of life. It often involves
+					persistent feelings of sadness&#44;
+					hopelessness&#44; and a loss of interest
+					in activities once enjoyed. Other common
+					symptoms include changes in appetite or
+					sleep patterns&#44; low energy
+					levels&#44; and difficulty concentrating
+					or making decisions.
+				</p>
+				<p class="font-display text-2xl">
+					If you or someone you know is struggling
+					with depression&#44; it&#39;s important
+					to seek help from a professional.
+					Remember&#44; you are not alone.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about depression</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Get Help Now</a
+					>.
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-green-500" svg_position="left">
+		<MH7 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Understanding Schizophrenia
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					Schizophrenia is a complex mental health
+					condition that affects how a person
+					thinks, feels, and behaves. Individuals
+					with schizophrenia may experience
+					symptoms such as delusions,
+					hallucinations, and disorganized
+					thinking, which can be overwhelming and
+					isolating.
+				</p>
+				<p class="font-display text-2xl">
+					Support is crucial for those living with
+					schizophrenia. Encouraging open
+					conversations about mental health can
+					help reduce stigma and promote
+					understanding. If you or someone you
+					know is struggling, remember that
+					reaching out for help is a sign of
+					strength.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about living with
+						schizophrenia</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore support resources for
+						individuals and families</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-white">
+		<MH8 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Understanding Social Anxiety
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					Social anxiety is a common mental health
+					condition that can make everyday
+					interactions feel overwhelming.
+					Individuals with social anxiety often
+					experience intense fear or worry about
+					being judged or embarrassed in social
+					situations, which can impact their daily
+					lives.
+				</p>
+				<p class="font-display text-2xl">
+					It’s important to remember that you’re
+					not alone in this experience. Seeking
+					support from friends, family, or mental
+					health professionals can help. By
+					talking about social anxiety, we can
+					reduce stigma and create a more
+					understanding environment for those
+					affected.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about managing
+						social anxiety</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore resources and support
+						groups</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-yellow-500" svg_position="left">
+		<MH3 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Embracing Moments of Stillness
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					In a world that’s always moving&#44;
+					finding a moment of stillness can feel
+					refreshing. For those dealing with
+					anxiety or stress&#44; learning to pause
+					and appreciate the small things can help
+					cultivate a sense of calm and gratitude.
+				</p>
+				<p class="font-display text-2xl">
+					Sometimes&#44; it’s in these quiet
+					moments that we reconnect with ourselves
+					and rediscover joy&#44; even in the
+					midst of challenges.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about managing
+						anxiety</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore mindfulness techniques</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-white">
+		<MH4 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Finding Light in Sleepless Nights
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					For many people dealing with conditions
+					like depression or anxiety&#44;
+					sleepless nights can become a part of
+					life. The weight of worries can make it
+					difficult to rest&#44; but these quiet
+					moments can also bring clarity and
+					reflection.
+				</p>
+				<p class="font-display text-2xl">
+					Embracing these nights with a smile can
+					remind us of our resilience. Even in
+					darkness&#44; there is potential for
+					hope and understanding of ourselves.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about managing
+						anxiety</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore coping strategies for
+						depression</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-green-500" svg_position="left">
+		<MH5 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Healing from Trauma
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					Experiencing trauma can leave a lasting
+					impact on our mental health. In the
+					aftermath, it’s common to feel a range
+					of emotions, from confusion to sadness.
+					Understanding these feelings through
+					reflection is an important step in the
+					healing process.
+				</p>
+				<p class="font-display text-2xl">
+					By taking the time to explore our
+					thoughts and emotions, we can begin to
+					make sense of our experiences. This
+					self-reflection can help us identify
+					coping mechanisms and support systems
+					that promote recovery and resilience.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about trauma and its
+						effects</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore resources for healing
+						and recovery</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-white">
+		<MH6 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Supporting Those in Need
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					For those who have experienced trauma,
+					finding support is crucial. It’s
+					important to reach out and let others
+					know when we’re struggling. Whether
+					through friends, family, or professional
+					help, sharing our experiences can
+					lighten the burden.
+				</p>
+				<p class="font-display text-2xl">
+					If you or someone you know is in need of
+					assistance, remember that it’s okay to
+					ask for help. There are resources
+					available to guide you on the path to
+					healing and recovery.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn how to support someone in
+						crisis</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore mental health resources
+						and hotlines</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-yellow-500" svg_position="left">
+		<MH9 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				The Strength of Family Bonds
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					Family is a source of strength,
+					providing love and support through
+					life’s ups and downs. Moments of joy can
+					coexist with tears, reminding us of the
+					importance of connection in navigating
+					challenges together.
+				</p>
+				<p class="font-display text-2xl">
+					If you or someone you know is
+					struggling, remember that reaching out
+					to your family can be a powerful step
+					towards healing. Together, we can face
+					the complexities of life and find solace
+					in our shared experiences.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about the importance
+						of family support</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore ways to strengthen
+						family connections</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<DualSection className="bg-white">
+		<MH2 slot="svg" />
+		<div class="space-y-4">
+			<h1 class="font-display text-5xl font-extrabold">
+				Cherishing Our Elders
+			</h1>
+			<div class="space-y-8 text-justify">
+				<p class="font-display text-2xl">
+					Our elders carry the wisdom of their
+					experiences, teaching us valuable
+					lessons about love, resilience, and the
+					importance of family. As they age, it’s
+					essential to cherish their stories and
+					provide the support they need to thrive.
+				</p>
+				<p class="font-display text-2xl">
+					If you have an elderly loved one, take
+					the time to connect and listen. Their
+					laughter and tears alike can strengthen
+					family bonds and create lasting
+					memories. Together, we can ensure that
+					our elders feel valued and supported in
+					their golden years.
+				</p>
+				<div class="flex flex-col gap-y-4 text-left">
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Learn more about supporting
+						elderly family members</a
+					>
+					<a
+						class="underline decoration-dashed font-bold text-3xl"
+						>Explore resources for elder
+						care</a
+					>
+				</div>
+			</div>
+		</div>
+	</DualSection>
+
+	<section class="bg-yellow-500">
+		<div class="flex flex-col gap-8 py-20">
+			<h1
+				class="mb-10 font-display text-5xl font-extrabold text-center underline decoration-dashed"
+			>
+				Stories
+			</h1>
+			<marquee
+				onmouseover="this.stop();"
+				onmouseout="this.start();"
+				behavior="alternate"
+				scrollamount="4"
+				direction="left"
+			>
+				<div class="flex gap-x-8">
+					{
+						testimonials.map((t) => (
+							<TestimonialCard
+								name={t.name}
+								body={t.body}
+							/>
+						))
+					}
+				</div>
+			</marquee>
+
+			<marquee
+				onmouseover="this.stop();"
+				onmouseout="this.start();"
+				behavior="alternate"
+				scrollamount="2"
+				direction="right"
+			>
+				<div class="flex gap-x-8">
+					{
+						testimonials.map((t) => (
+							<TestimonialCard
+								name={t.name}
+								body={t.body}
+							/>
+						))
+					}
+				</div>
+			</marquee>
+
+			<marquee
+				onmouseover="this.stop();"
+				onmouseout="this.start();"
+				behavior="alternate"
+				scrollamount="4"
+				direction="left"
+			>
+				<div class="flex gap-x-8">
+					{
+						testimonials.map((t) => (
+							<TestimonialCard
+								name={t.name}
+								body={t.body}
+							/>
+						))
+					}
+				</div>
+			</marquee>
+		</div>
+	</section>
+</Layout>

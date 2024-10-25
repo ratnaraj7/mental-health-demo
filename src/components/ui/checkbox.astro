@@ -1,0 +1,42 @@
+---
+interface Props {
+	label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<div>
+	<label class="flex gap-x-2 items-center">
+		<div class="relative">
+			<input
+				type="checkbox"
+				class="peer appearance-none border-4 border-black h-8 w-8 checked:shadow-[0.2rem_0.2rem_0_0_black] checked:bg-purple-300 outline-none"
+			/>
+			<span
+				class="absolute left-0 peer-checked:fill-black fill-white h-8 w-8 p-1 w-full h-full border-4 border-transparent block top-0 flex items-center justify-center"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					version="1.1"
+					x="0px"
+					y="0px"
+					viewBox="82.533 -142.687 84.935 67.379"
+					enable-background="new 82.533 -142.687 84.935 67.379"
+					xml:space="preserve"
+				>
+					<g id="__id8_sgwnjzg8r"> </g>
+					<g id="__id9_sgwnjzg8r">
+						<polygon
+							points="111.724,-75.308 82.533,-104.501 94.165,-116.136 111.724,-98.578 155.835,-142.687    167.468,-131.056  "
+						></polygon>
+					</g>
+				</svg>
+			</span>
+		</div>
+		<p class="font-bold select-none">
+			{label}
+		</p>
+	</label>
+</div>

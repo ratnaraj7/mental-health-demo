@@ -1,0 +1,15 @@
+---
+interface Props {
+	body: string;
+	name: string;
+}
+
+const { body, name } = Astro.props;
+---
+
+<div
+	class="w-[20rem] h-[10rem] border-4 border-black p-8 shadow-[0.5rem_0.5rem_0_0_black] bg-purple-500 text-whitespace-y-4"
+>
+	<p class="text-xl italic text-justify break-words flex">{body}</p>
+	<p class="text-xl">{name}</p>
+</div>

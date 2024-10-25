@@ -1,0 +1,45 @@
+---
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout
+	title="Welcome to Astro."
+	description="The description of your website"
+	keywords={[""]}
+>
+	<section class="bg-yellow-500 py-20">
+		<div class="section min-h-[calc(100vh-5rem)] flex flex-col p-4">
+			<div
+				class="flex gap-x-8 font-bold font-display text-2xl"
+			>
+				<label>
+					<input
+						id="once"
+						type="radio"
+						name="donation-type"
+						class="hidden peer"
+						checked
+					/>
+					<p
+						class="peer-checked:bg-purple-500 border-4 border-black peer-checked:shadow-[0.4rem_0.4rem_0_0_black] p-4 bg-white"
+					>
+						Once
+					</p>
+				</label>
+				<label>
+					<input
+						id="monthly"
+						type="radio"
+						name="donation-type"
+						class="hidden peer"
+					/>
+					<p
+						class="peer-checked:bg-purple-500 border-4 border-black peer-checked:shadow-[0.4rem_0.4rem_0_0_black] p-4 bg-white"
+					>
+						Monthly
+					</p>
+				</label>
+			</div>
+		</div>
+	</section>
+</Layout>

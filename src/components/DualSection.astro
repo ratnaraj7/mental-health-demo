@@ -1,0 +1,32 @@
+---
+import { cn } from "src/lib/utils";
+
+interface Props {
+	className?: string;
+	svg_position?: "left" | "right";
+}
+
+const { className, svg_position = "right" } = Astro.props;
+---
+
+<section class={cn("", className)}>
+	<div class="section flex py-20 h-full min-h-[calc(100vh-5rem)]">
+		<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 my-auto">
+			<div
+				class="max-w-[30rem] lg:max-w-full bg-accent border-4 border-black shadow-[0.5rem_0.5rem_0_0_black]"
+			>
+				<slot name="svg" />
+			</div>
+			<div
+				class={cn(
+					"flex flex-col",
+					svg_position === "left"
+						? "order-1"
+						: "lg:order-first",
+				)}
+			>
+				<slot />
+			</div>
+		</div>
+	</div>
+</section>

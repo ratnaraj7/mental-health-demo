@@ -1,0 +1,65 @@
+---
+import "@fontsource-variable/big-shoulders-display";
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/footer.astro";
+interface Props {
+	title: string;
+	description: string;
+	keywords: string[];
+}
+const { title, description, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="keywords" content={keywords.join(", ")} />
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer base {
+		:root {
+			--color-primary: 207 238 48; /* Dark gray primary */
+			--color-secondary: 250 223 12; /* Darker gray secondary */
+			--color-accent: 197 161 255; /* Slightly lighter gray for accents */
+			--color-background: 10 10 10; /* Very dark background */
+			--color-text: 230 230 230; /* Light gray text */
+			--color-border: 30 30 30; /* Dark gray border */
+			--color-highlight: 150 150 150; /* Lighter gray for highlights */
+			--color-muted: 20 20 20; /* Very dark gray for muted elements */
+			--color-shadow: 0 0 0; /* Black shadows */
+		}
+
+		[data-theme="dark"] {
+			--color-primary: 10 10 10; /* Very dark gray primary */
+			--color-secondary: 20 20 20; /* Dark gray secondary */
+			--color-accent: 50 50 50; /* Slightly lighter gray for accents */
+			--color-background: 0 0 0; /* Black background */
+			--color-text: 200 200 200; /* Lighter gray text */
+			--color-border: 10 10 10; /* Very dark gray border */
+			--color-highlight: 100 100 100; /* Lighter gray for highlights */
+			--color-muted: 0 0 0; /* Black for muted elements */
+			--color-shadow: 0 0 0; /* Black shadows */
+		}
+	}
+
+	.section {
+		@apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+	}
+</style>
